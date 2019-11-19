@@ -6,19 +6,35 @@ export default function Song({title, artist, link}) {
     return (
     <TouchableOpacity onPress = { () => Linking.openURL(link)  }>
         <View style = {styles.container}>
-            <Text>Title: {title}</Text>
-            <Text>Artist: {artist}</Text>
+            <Text style = {styles.title}>Title: {title}</Text>
+            <Text style = {styles.artist}>Artist: {styles.artist}</Text>
         </View>
      </TouchableOpacity>
     );
   }
 
   const styles = StyleSheet.create({
-      container: {
-          display: 'flex',
+    container: {
+        justifyContent: 'center',
+        borderWidth: 0.5,
+        shadowColor: 'blue',
+        shadowOffset: { width: 0, height: 3 },
+        shadowOpacity: 0.22,
+        shadowRadius: 4,
+        padding: 8,
+        marginBottom: 16,      
+        backgroundColor: "teal"        
       },
-      text: {
-          textAlign: 'center',
-      }
+      title: {
+        fontSize: 16,
+        marginBottom: 8,
+        fontWeight: "bold",
+        color: 'white'
+      },
+      artist: {
+        fontSize: 12,
+        fontWeight: "bold",
+        color: 'white'
+      },
 
   })
