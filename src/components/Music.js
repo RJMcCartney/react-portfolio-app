@@ -1,16 +1,19 @@
 import React, { Component } from 'react';
-import { StyleSheet, View  } from 'react-native';
+import { StyleSheet, View, FlatList, TextInput   } from 'react-native';
 import { music } from '../data/MusicData'
 import Song from './Song'
 
 class Music extends Component{
     render()    {
-        const firstSong = music[0]
-        return (
+      
+        return (            
+            // <TextInput/>
+            <FlatList data = {music} numColumns = "2" renderItem={({item}) =>
             <View style = {styles.container}>
-                <Song style = {styles.songs} title={firstSong.title} artist = {firstSong.artist} link = {firstSong.link}/>
-              
-            </View>            
+                <Song style = {styles.songs} title={item.title} artist = {item.artist} link = {item.link}/>              
+            </View>
+            }            
+          />
         )
     }
 }
