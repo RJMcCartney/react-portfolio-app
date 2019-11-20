@@ -7,7 +7,7 @@ import { screens } from '../data/NavigationData'
 
 
 class Navigator extends Component {
-	constructor(props){
+	constructor(props) {
 		super(props)
 		this.state = {
 			screenIndex: 2
@@ -15,39 +15,39 @@ class Navigator extends Component {
 		this.changeScreen = this.changeScreen.bind(this)
 		this.focusAboutPage = this.focusAboutPage.bind(this)
 	}
-	changeScreen (index)	{
+	changeScreen(index) {
 		this.setState({
 			screenIndex: index
 		})
 	}
-	focusAboutPage () {
+	focusAboutPage() {
 		this.setState({
 			screenIndex: 0
 		})
-	}	
-	
-	render () {		
+	}
+
+	render() {
 		return (
 			<View style={styles.container}>
-	      <Header focusAboutPage = {this.focusAboutPage}/>
-	    <Music/>
-		  <Footer 
-		  	screens={screens} test={'test'}
-			changeScreen = {this.changeScreen}
-			screenIndex = {this.state.screenIndex}/>
-		  </View>
+				<Header focusAboutPage={this.focusAboutPage} />
+				<Music />
+				<Footer
+					screens={screens} test={'test'}
+					changeScreen={this.changeScreen}
+					screenIndex={this.state.screenIndex} />
+			</View>
 		)
 	}
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  content: {
-    flex: 1,
-    backgroundColor: 'red',
-  },
+	container: {
+		flex: 1,
+	},
+	content: {
+		flex: 1,
+		backgroundColor: 'red',
+	},
 })
 
 export default Navigator

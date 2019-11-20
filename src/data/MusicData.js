@@ -29,26 +29,26 @@ const music = [
 		artist: 'Chet Faker',
 		link: 'https://www.youtube.com/watch?v=HIfFA8-RaHQ',
 	},
-	{
-		title: 'Genghis Khan',
-		artist: 'Mike Snow',
-		link: 'https://www.youtube.com/watch?v=P_SlAzsXa7E',
-	},
-	{
-		title: 'Make It Wit Chu (Album Version)',
-		artist: 'Queens Of The Stone Age',
-		link: 'https://www.youtube.com/watch?v=hg14Ocs03xA'
-	},
-	{
-		title: 'Anvil',
-		artist: 'Lorn',
-		link: 'https://www.youtube.com/watch?v=CqaAs_3azSs'
-	},
-	{
-		title: 'Crow (DJ-Kicks)',
-		artist: 'Forest Swords',
-		link: 'https://www.youtube.com/watch?v=lan-Pjv99Xk'
-	}
+	// {
+	// 	title: 'Genghis Khan',
+	// 	artist: 'Mike Snow',
+	// 	link: 'https://www.youtube.com/watch?v=P_SlAzsXa7E',
+	// },
+	// {
+	// 	title: 'Make It Wit Chu (Album Version)',
+	// 	artist: 'Queens Of The Stone Age',
+	// 	link: 'https://www.youtube.com/watch?v=hg14Ocs03xA'
+	// },
+	// {
+	// 	title: 'Anvil',
+	// 	artist: 'Lorn',
+	// 	link: 'https://www.youtube.com/watch?v=CqaAs_3azSs'
+	// },
+	// {
+	// 	title: 'Crow (DJ-Kicks)',
+	// 	artist: 'Forest Swords',
+	// 	link: 'https://www.youtube.com/watch?v=lan-Pjv99Xk'
+	// }
 ]
 
-export {music}
+export { music }
