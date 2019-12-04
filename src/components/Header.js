@@ -2,19 +2,19 @@ import React from 'react';
 import { StyleSheet, View, TouchableOpacity, Text } from 'react-native';
 import Avatar from './Avatar'
 
-export default function Header({ focusAboutPage }) {
+export default function Header({ focusAboutPage, titles }) {
+  console.log(titles)
   return (
-    <TouchableOpacity onPress={focusAboutPage}>
-      <View style={styles.container}>
-        <View style={styles.tabTitle}>
-          <Text>Tab Title Here</Text>
-        </View>
 
-        <View style={styles.avatarStyling}>
-          <Avatar size={20} />
-        </View>
-      </View>
-    </TouchableOpacity>
+    <View style={styles.container}>
+        <Text style={styles.tabTitle}>{titles}</Text>
+        <TouchableOpacity 
+        onPress={focusAboutPage}
+        style = {styles.avatarStyling}> 
+                <Avatar size={20} />
+      </TouchableOpacity>
+    </View>
+
   );
 }
 
@@ -34,7 +34,8 @@ const styles = StyleSheet.create({
   },
   tabTitle: {
     flex: 1,
-    alignContent: 'center'
+    textAlign: 'center',
+    justifyContent: 'center'
   }
 
 });

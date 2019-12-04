@@ -7,7 +7,7 @@ export default function Song({ title, artist, link }) {
     <TouchableOpacity onPress={() => Linking.openURL(link)}>
       <View style={styles.container}>
         <Text style={styles.title}>Title: {title}</Text>
-        <Text style={styles.artist}>Artist: {styles.artist}</Text>
+        <Text style={styles.artist}>Artist: {artist}</Text>
       </View>
     </TouchableOpacity>
   );

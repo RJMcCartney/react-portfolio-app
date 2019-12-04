@@ -3,6 +3,7 @@ import { View, StyleSheet } from 'react-native'
 import Header from './Header'
 import Footer from './Footer'
 import Music from './Music'
+import About from './About'
 import { screens } from '../data/NavigationData'
 
 
@@ -10,7 +11,7 @@ class Navigator extends Component {
 	constructor(props) {
 		super(props)
 		this.state = {
-			screenIndex: 2
+			screenIndex: 1
 		}
 		this.changeScreen = this.changeScreen.bind(this)
 		this.focusAboutPage = this.focusAboutPage.bind(this)
@@ -26,13 +27,39 @@ class Navigator extends Component {
 		})
 	}
 
+	selectScreen(){
+		const {selection} = this.state	
+		if(selection === 0)
+		{
+			return <About />
+		}
+		if(selection === 1)	
+		{
+			return <Music/>
+		}
+		if(selection ===2)
+		{
+			//return <CV>			
+		}
+		if(selection ===3)
+		{
+			//return contact
+		}
+		
+	}
+
+
 	render() {
+		const {screenIndex} = this.state
 		return (
 			<View style={styles.container}>
-				<Header focusAboutPage={this.focusAboutPage} />
-				<Music />
+				<Header 
+					focusAboutPage={this.focusAboutPage} 
+					titles = {screens[screenIndex]}
+				/>
+				{this.selectScreen()}
 				<Footer
-					screens={screens} test={'test'}
+					screens={screens}
 					changeScreen={this.changeScreen}
 					screenIndex={this.state.screenIndex} />
 			</View>
